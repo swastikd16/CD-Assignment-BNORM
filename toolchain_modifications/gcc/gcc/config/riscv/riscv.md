@@ -106,6 +106,7 @@
   
   ;;  cdass code addition here------------------------------------ 
   UNSPEC_BNORM
+  UNSPEC_SIGMOID
   ;; -------------------------------------------------------------- 
 ])
 
@@ -712,6 +713,17 @@
 		   UNSPEC_BNORM))]
   ""
   "bnorm\t%0,%1,%2"
+  [(set_attr "type" "arith")
+   (set_attr "mode" "DI")])
+
+;; Custom instruction: sigmoid
+(define_insn "riscv_sigmoid"
+  [(set (match_operand:DI 0 "register_operand" "=r")
+        (unspec:DI [(match_operand:DI 1 "register_operand" "r")
+                    (match_operand:DI 2 "register_operand" "r")]
+                   UNSPEC_SIGMOID))]
+  ""
+  "sigmoid\t%0,%1,%2"
   [(set_attr "type" "arith")
    (set_attr "mode" "DI")])
 

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-#include "rv_autovect_static.h"
+
 
 
 // Demonstrates a single-element (N=1) invocation of the hardware instruction, 

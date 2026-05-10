@@ -101,6 +101,8 @@
 #define MASK_ADD  0xfe00707f
 #define MATCH_BNORM 0x0b         // swastik code addition here
 #define MASK_BNORM  0xfe00707f   // swastik code addition here
+#define MATCH_SIGMOID 0x0000102b
+#define MASK_SIGMOID  0xfe00707f
 #define MATCH_SUB 0x40000033
 #define MASK_SUB  0xfe00707f
 #define MATCH_SLL 0x1033

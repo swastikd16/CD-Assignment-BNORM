@@ -557,4 +557,5 @@ OPTAB_D (iorn_optab, "iorn$a3")
 
 /*  swastik code addition here------------------------------------ */
 OPTAB_D (bnorm_optab, "bnorm$I$a")
+OPTAB_D (sigmoid_optab, "sigmoid$I$a")
 /* -------------------------------------------------------------- */

@@ -349,7 +349,7 @@ This gives GCC an **internal vocabulary word** (`IFN_BNORM`) to use when referri
 
 **Exact Code Added:**
 ```c
-/*  cdass code addition here------------------------------------ */
+/*  swastik code addition here------------------------------------ */
 OPTAB_D (bnorm_optab, "bnorm$I$a")
 /* -------------------------------------------------------------- */
 ```
@@ -372,7 +372,7 @@ An "optab" (Operation Table) is GCC's **bridge between the machine-independent m
 **Addition 1 — The Constant (Line 106):**
 Inside the `define_c_enum "unspec"` block:
 ```lisp
-;;  cdass code addition here------------------------------------
+;;  swastik code addition here------------------------------------
 UNSPEC_BNORM
 ;; --------------------------------------------------------------
 ```
@@ -431,7 +431,7 @@ This is the **final translator**. It is the last link in the entire pipeline. It
 ```c
 #include <stdio.h>
 #include <math.h>
-#include "rv_autovect.h"
+
 
 int main(void)
 {

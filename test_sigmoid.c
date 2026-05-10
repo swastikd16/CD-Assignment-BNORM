@@ -1,28 +1,23 @@
-#include <stdio.h>
-#include <math.h>
-
-
-// this is a program to test the sigmoid function created using Template
+/*
+ * test_sigmoid.c  -  Test for the custom 'sigmoid' RISC-V instruction.
+ *
+ * Compile:
+ *   riscv64-unknown-elf-gcc -O3 test_sigmoid.c -o test_sigmoid -lm
+ *
+ * Verify instruction was emitted:
+ *   riscv64-unknown-elf-objdump -d test_sigmoid | grep -A5 -B5 "sigmoid"
+ *
+ * Run on Spike:
+ *   spike pk test_sigmoid
+ */
+#include "sigmoid_intrinsic.h"
 
 int main(void)
 {
-    /* Static input values */
-    float x1 = 5.0f;
-    float x2 = 0.0f;
-    float x3 = -3.0f;
-    float x4 = 1.5f;
+    sigmoid_input_t  input  = { /* TODO: fill in your values */ };
+    sigmoid_params_t params = { /* TODO: fill in your values */ };
 
-    /* Sigmoid formula: f(x) = 1 / (1 + e^(-x)) */
-    float r1 = 1.0f / (1.0f + expf(-x1));
-    float r2 = 1.0f / (1.0f + expf(-x2));
-    float r3 = 1.0f / (1.0f + expf(-x3));
-    float r4 = 1.0f / (1.0f + expf(-x4));
-
-    printf("Sigmoid Results:\n");
-    printf("sigmoid(%4.1f) = %f\n", x1, r1);
-    printf("sigmoid(%4.1f) = %f\n", x2, r2);
-    printf("sigmoid(%4.1f) = %f\n", x3, r3);
-    printf("sigmoid(%4.1f) = %f\n", x4, r4);
+    sigmoid_run(&input, &params);
 
     return 0;
 }

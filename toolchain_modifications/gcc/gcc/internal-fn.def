@@ -610,6 +610,7 @@ DEF_INTERNAL_OPTAB_FN (BIT_IORN, ECF_CONST, iorn, binary)
 
 /*  swastik code addition here------------------------------------ */
 DEF_INTERNAL_OPTAB_FN (BNORM, ECF_CONST, bnorm, binary)
+DEF_INTERNAL_OPTAB_FN (SIGMOID, ECF_CONST, sigmoid, binary)
 
 
 /* -------------------------------------------------------------- */

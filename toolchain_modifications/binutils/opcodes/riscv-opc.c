@@ -560,6 +560,7 @@ const struct riscv_opcode riscv_opcodes[] =
 {"add",         0, INSN_CLASS_I, "d,s,t,1",   MATCH_ADD, MASK_ADD, match_opcode, 0 },
 {"add",         0, INSN_CLASS_I, "d,s,j",     MATCH_ADDI, MASK_ADDI, match_opcode, INSN_ALIAS },
 {"bnorm",       0, INSN_CLASS_I, "d,s,t",     MATCH_BNORM, MASK_BNORM, match_opcode, 0 },    // swastik code addition here
+{"sigmoid",  0, INSN_CLASS_I, "d,s,t", MATCH_SIGMOID, MASK_SIGMOID, match_opcode, 0 },
 {"la",          0, INSN_CLASS_I, "d,B",       0, (int) M_LA, match_rd_nonzero, INSN_MACRO },
 {"lla",         0, INSN_CLASS_I, "d,B",       0, (int) M_LLA, NULL, INSN_MACRO },
 {"lga",         0, INSN_CLASS_I, "d,B",       0, (int) M_LGA, match_rd_nonzero, INSN_MACRO },
