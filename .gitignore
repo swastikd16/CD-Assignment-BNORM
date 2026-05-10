@@ -1,0 +1,37 @@
+# ── Build artifacts (exclude these or push will fail) ──────────
+riscv-gnu-toolchain/build*/
+riscv-gnu-toolchain/stamps/
+riscv-gnu-toolchain/*.log
+riscv-gnu-toolchain/**/*.o
+riscv-gnu-toolchain/**/*.a
+riscv-gnu-toolchain/**/*.so
+riscv-gnu-toolchain/**/*.so.*
+riscv-gnu-toolchain/**/*.la
+riscv-gnu-toolchain/**/*.lo
+riscv-gnu-toolchain/**/*.pyc
+riscv-gnu-toolchain/**/conftest*
+riscv-gnu-toolchain/**/config.log
+riscv-gnu-toolchain/**/config.status
+riscv-gnu-toolchain/**/autom4te.cache/
+riscv-gnu-toolchain/**/.deps/
+
+# ── Exclude spike and other toolchain components ────────────────
+riscv-gnu-toolchain/spike/
+riscv-gnu-toolchain/newlib/
+riscv-gnu-toolchain/gdb/
+riscv-gnu-toolchain/glibc/
+riscv-gnu-toolchain/musl/
+riscv-gnu-toolchain/qemu/
+riscv-gnu-toolchain/pk/
+riscv-pk/
+
+# ── Compiled test binaries in project root ──────────────────────
+test_di
+test_fmadd
+test_static
+test_sigmoid
+test_batch
+*.o
+*.Identifier
+riscv-gnu-toolchain/
+riscv-pk/
