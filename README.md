@@ -124,6 +124,16 @@ To make this project easily extensible, we developed a powerful automation scrip
 
 ---
 
+## Automated Opcode Verification: `generate_opcode_macros.sh`
+
+In addition to the patching system, we implemented a tool for **formal verification** of instruction encodings using the official `riscv-opcodes` framework.
+
+- **Purpose:** Automatically calculates the exact `MATCH` and `MASK` binary values for any new instruction definition. It acts as a safety net to ensure custom opcodes do not conflict with the existing RISC-V ISA.
+- **Usage:** `./generate_opcode_macros.sh "<instruction_definition>"`
+- **Documentation:** For a deep dive into bit-field encoding and instruction set architecture (ISA) design, refer to [**Generate_Opcodes_Guide.md**](Generate_Opcodes_Guide.md).
+
+---
+
 ## Why This Project Matters (Compiler Theory)
 
 Standard software development relies on the CPU executing multiple sequential instructions (Fetch -> Load -> Subtract -> Divide -> Multiply -> Add -> Store) just to calculate one array element.
