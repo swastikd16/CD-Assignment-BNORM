@@ -16,6 +16,26 @@ Unlike standard software projects that compile math into generic CPU instruction
 > - **Code Breakdown:** For a complete, line-by-line record of all modifications made to the toolchain, see [**RISCV_Code_Changes.md**](RISCV_Code_Changes.md).  
 > - **Project Report:** For the full project documentation and comprehensive report, refer to [**Group10_Batch_Normalization_Documentation.pdf**](Group10_Batch_Normalization_Documentation.pdf).
 
+---
+
+## Toolchain Modifications Map
+
+The following files within the `toolchain_modifications/` directory contain the core logic of our hardware-software integration:
+
+```text
+toolchain_modifications/
+├── binutils/include/opcode/riscv-opc.h   ← MATCH/MASK defines
+├── binutils/opcodes/riscv-opc.c           ← opcode table entry
+├── spike/riscv/encoding.h                 ← DECLARE_INSN
+├── spike/riscv/riscv.mk.in                ← build list
+├── spike/riscv/insns/bnorm.h              ← execution logic
+└── gcc/gcc/
+    ├── internal-fn.def                    ← IFN_BNORM
+    ├── optabs.def                         ← bnorm_optab
+    ├── tree-vect-patterns.cc              ← pattern recognizer
+    └── config/riscv/riscv.md              ← define_insn RTL
+```
+
 ## System Architecture & Modification Pipeline
 
 Our modifications span across three primary sub-systems of the RISC-V toolchain:
